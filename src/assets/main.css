@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: Lato;
+  src:
+    url('@/assets/fonts/lato_light.woff2') format('woff2'),
+    url('@/assets/fonts/lato_light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Rufina;
+  src:
+    url('@/assets/fonts/rufina-regular.woff2') format('woff2'),
+    url('@/assets/fonts/rufina-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src:
+    url('@/assets/fonts/001_interstellar_log.woff2') format('woff2'),
+    url('@/assets/fonts/001_interstellar_log.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+.visible__hidden, 
+#vue-inspector-container {
+  display: none;
+}
+.visible__visible {
+  display: block;
+}
+.footer__down {
+  border-top: 2px dashed #ffffff;
+}

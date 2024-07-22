@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '1920': '480rem'
+      },
+      fontFamily: {
+        lato: ['Lato', 'sans-serif'],
+        rufina: ['Rufina', 'serif'],
+        inter: ['Inter', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
