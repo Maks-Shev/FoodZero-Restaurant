@@ -9,7 +9,7 @@
                     </div>
                     <div class="flex flex-col pt-32  mr-18">
                         <h2 class="text-white font-rufina text-3xl">Contact</h2>
-                        <address class="mt-14 font-lato not-italic font-lato text-lg text-white">
+                        <address class="mt-14 font-lato not-italic text-lg text-white">
                             <a class="" href="tel:+9260000000">+79260000000</a>
                             <p>info@foodzero.com</p>
                             <p class="pt-7">1959 Sepulveda Blvd. Culver City, CA, 90230</p>
@@ -22,14 +22,15 @@
                                 class="h-24 w-96 py-10 px-7 text-2xl text-white placeholder:text-white bg-transparent border border-white"
                                 type="email" name="email" id="" placeholder="Email Address">
                             <button
-                                class="h-20 w-48 border border-b-white ml-7 text-white text-3xl font-rufina bg-[#5E6600]"
-                                type="submit">Subscribe</button>
+                                class="h-20 w-48 mb-[30px] border border-b-white ml-7 text-white text-3xl font-rufina bg-[#5E6600]"
+                                type="submit">Subscribe
+                            </button>
                         </form>
                         <p class="text-white pt-4 font-lato">Join our subscribers and get best recipe delivered each week!
                         </p>
                     </div>
                 </div>
-                <div class="footer__down flex justify-between pt-14 pb-20">
+                <div class="footer__down border-t-2 border-dashed flex justify-between pt-14 pb-20">
                     <div>
                         <span class="text-white font-lato text-2xl pl-32">© 2024 Zero Inc. All rights Reserved</span>
                     </div>

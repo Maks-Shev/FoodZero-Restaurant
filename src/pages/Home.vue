@@ -1,8 +1,8 @@
 <script setup>
-import Header from './Header.vue'
-import Footer from './Footer.vue'
-import BookingForm from './BookingForm.vue'
-import MenuHome from './MenuHome.vue';
+import Header from '../components/Header.vue'
+import Footer from '../components/Footer.vue'
+import BookingForm from '../components/BookingForm.vue'
+import MenuHome from '../components/MenuHome.vue';
 </script>
 
 <template>
@@ -75,21 +75,35 @@ import MenuHome from './MenuHome.vue';
                     </div>
                 </div>
             </div>
-
-            <div class="container__chef flex bg-[#EBF0E4] mx-auto">
-                <div class="img_chef relative">
-                    <div class="absolute top-[100px] -z-10">
-                        <img src="/home/Leaf-1.png" alt="">
-                    </div>
-                    <div class="mt-[200px] z-10">
-                        <img src="/home/Home_cook.png" alt="">
-                    </div>
+            <!-- chef cook -->
+            <div class="container__chef flex justify-between text-center bg-[#EBF0E4] pb-[100px]">
+                <div class="img_chef  pl-[40px] mt-[150px] w-[930px]">
+                    <img src="/public/home/Chef.png" alt="" class="">
                 </div>
-                <div class="text__chef">
+                <div class="text__chef pr-[20px] w-[930px] mx-auto">
                     <h2 class="text-[108px] font-rufina pt-[220px]">Excellent cook</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lorem id penatibus imperdiet. Turpis
+                    <p class="text-[24px] text-[#4D4D4D] font-lato">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Purus lorem id penatibus imperdiet. Turpis
                         egestas ultricies purus auctor tincidunt lacus nunc.</p>
-                    <img src="/home/Leaf-2.png" alt="">
+                    <img src="/home/Leaf-2.png" alt="" class="mt-[200px] ml-[170px]">
+                </div>
+            </div>
+            <!-- Характеристики -->
+            <div class="flex justify-center mt-[200px] mb-[190px]">
+                <div class="w-[508px] flex flex-col text-center items-center">
+                    <img src="/home/icon_fish.svg" alt="" class="w-[260px] ">
+                    <h2 class="text-[48px] font-rufina font-bold pt-[40px]">Premium Quality</h2>
+                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                </div>
+                <div class="w-[508px] flex flex-col text-center items-center">
+                    <img src=" /home/icon_carrot .svg" alt="" class="w-[260px]">
+                    <h2 class="text-[48px] font-rufina font-bold pt-[40px]">Seasonal Vegetables</h2>
+                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                </div>
+                <div class="w-[508px] flex flex-col text-center items-center">
+                    <img src=" /home/ikon_fruit.svg" alt="" class="w-[260px]">
+                    <h2 class="text-[48px] font-rufina font-bold pt-[40px]">Fresh Fruit</h2>
+                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
                 </div>
             </div>
         </main>

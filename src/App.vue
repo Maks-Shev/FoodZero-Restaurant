@@ -1,11 +1,16 @@
-<script setup>
+<!-- <script setup>
 // import BookingForm from './components/BookingForm.vue';
-import Home from './components/Home.vue';
-</script>
+import Home from './pages/Home.vue';
+</script> -->
 
 <template>
-    <div>
+    <div id="app">
         <!-- <BookingForm/> -->
-        <Home/>
+        <!-- <Home/> -->
+        <nav>
+            <router-link to="/">Home</router-link>
+            <router-link to="/BlogList">Blog List</router-link>
+        </nav>
+        <router-view />
     </div>
 </template>
