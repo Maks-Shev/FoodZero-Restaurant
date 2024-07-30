@@ -7,9 +7,11 @@ import MenuHome from '../components/MenuHome.vue';
 
 <template>
     <div>
-        <Header />
+
         <header>
+
             <div class="bg-[#233000] pb-[200px] px-8">
+                <Header />
                 <div class="flex justify-around">
                     <div class="flex flex-col">
                         <div class="relative flex flex-col">
@@ -93,17 +95,20 @@ import MenuHome from '../components/MenuHome.vue';
                 <div class="w-[508px] flex flex-col text-center items-center">
                     <img src="/home/icon_fish.svg" alt="" class="w-[260px] ">
                     <h2 class="text-[48px] font-rufina font-bold pt-[40px]">Premium Quality</h2>
-                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Neque congue arcu</p>
                 </div>
                 <div class="w-[508px] flex flex-col text-center items-center">
                     <img src=" /home/icon_carrot .svg" alt="" class="w-[260px]">
                     <h2 class="text-[48px] font-rufina font-bold pt-[40px]">Seasonal Vegetables</h2>
-                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Neque congue arcu</p>
                 </div>
                 <div class="w-[508px] flex flex-col text-center items-center">
                     <img src=" /home/ikon_fruit.svg" alt="" class="w-[260px]">
                     <h2 class="text-[48px] font-rufina font-bold pt-[40px]">Fresh Fruit</h2>
-                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque congue arcu</p>
+                    <p class="text-[24px] font-lato text-[#4D4D4D] pt-[40px]">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Neque congue arcu</p>
                 </div>
             </div>
         </main>

@@ -1,7 +1,7 @@
 <template >
     <div>
         <header>
-            <div class="bg-[#233000]">
+            <div class="bg-[#233000] bg-transparent">
                 <div class="flex justify-between items-center text-center h-52">
                     <div class="flex ml-28">
                         <img src="/Logo.svg" alt="">

@@ -19,10 +19,10 @@
                         <h2 class="text-white font-rufina text-3xl">Never Miss a Recipe</h2>
                         <form class="mt-14 flex items-center max-w-3xl">
                             <input
-                                class="h-24 w-96 py-10 px-7 text-2xl text-white placeholder:text-white bg-transparent border border-white"
+                                class="h-24 w-96 py-10 px-7 m-0 text-2xl text-white placeholder:text-white bg-transparent border border-white"
                                 type="email" name="email" id="" placeholder="Email Address">
                             <button
-                                class="h-20 w-48 mb-[30px] border border-b-white ml-7 text-white text-3xl font-rufina bg-[#5E6600]"
+                                class="h-20 w-48 border border-b-white ml-7 text-white text-3xl font-rufina bg-[#5E6600]"
                                 type="submit">Subscribe
                             </button>
                         </form>

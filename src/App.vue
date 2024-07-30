@@ -7,10 +7,10 @@ import Home from './pages/Home.vue';
     <div id="app">
         <!-- <BookingForm/> -->
         <!-- <Home/> -->
-        <nav>
+        <!-- <nav>
             <router-link to="/">Home</router-link>
             <router-link to="/BlogList">Blog List</router-link>
-        </nav>
+        </nav> -->
         <router-view />
     </div>
 </template>
