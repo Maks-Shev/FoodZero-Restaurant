@@ -14,10 +14,11 @@
                         </div>
                     </div>
                     <div class="flex items-center text-2xl mr-32 pr-3.5">
-                        <a class="text-white mr-7 mt-[20px] font-sans w-[320px]" href="tel:+79260000000">
+                        <a class="text-white mr-7  font-sans w-[320px]" href="tel:+79260000000">
                             +7 926 000 00 00
                         </a>
-                        <button class="text-white text-[32px] border-2 border-white pt-5 pb-5 px-11 font-rufina bg-transparent">
+                        <button
+                            class="text-white text-[32px] border-2 border-white pt-5 pb-5 px-11 font-rufina bg-transparent">
                             Reservations
                         </button>
                     </div>

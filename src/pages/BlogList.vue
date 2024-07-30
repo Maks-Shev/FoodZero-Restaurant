@@ -41,7 +41,7 @@
                         <img :src="post.image" alt="" class="blog-image w-[500px]">
                         <div class="w-[650px]">
                             <div class="flex items-center gap-[14px]">
-                                <img :src="post.selfie" alt="">
+                                <img :src="post.avatar" alt="">
                                 <p class="text-[18px] font-lato font-bold text-[#5E6600]">{{ post.author }}</p>
                                 <div class="bg-[#5E6600] w-[4px] h-[4px] rounded-full"></div>
                                 <p class="text-[18px] font-lato font-bold text-[#5E6600]">{{ formatDate(post.date) }}</p>
@@ -67,26 +67,48 @@
         </div>
 
         <!-- Блог сеткой -->
-        <div v-if="viewMode === 'grid'" class="blog-grid">
-            <div v-for="post in paginatedPosts" :key="post.id" class="blog-item-grid">
-                <div class="blog-info">
-                    <router-link :to="{ name: 'BlogDetails', params: { id: post.id } }" class="blog-title">
-                        <img :src="post.image" alt="" class="blog-image-grid">
-                        <h2>{{ post.title }}</h2>
-                        <p class="blog-date">{{ formatDate(post.date) }}</p>
-                        <p>{{ post.content.substring(0, 100) }}...</p>
-                        <p v-if="post.commentCount !== undefined">{{ post.commentCount }} Comments</p>
-                        <p v-else>Loading comments...</p>
-                    </router-link>
+        <div v-if="viewMode === 'grid'" class="flex justify-center">
+            <div class="grid grid-cols-2 gap-[60px]">
+                <div v-for="post in paginatedPosts" :key="post.id" class="blog-item-grid">
+                    <div class="blog-info">
+                        <router-link :to="{ name: 'BlogDetails', params: { id: post.id } }"
+                            class="flex flex-col items-center mt-[60px]">
+                            <img :src="post.image" alt="" class="blog-image w-[600px]">
+                            <div class="w-[650px]  ">
+                                <div class="flex items-center gap-[14px] mt-[68px]">
+                                    <img :src="post.avatar" alt="">
+                                    <p class="text-[18px] font-lato font-bold text-[#5E6600]">{{ post.author }}</p>
+                                    <div class="bg-[#5E6600] w-[4px] h-[4px] rounded-full"></div>
+                                    <p class="text-[18px] font-lato font-bold text-[#5E6600]">{{ formatDate(post.date) }}
+                                    </p>
+                                    <div class="bg-[#5E6600] w-[4px] h-[4px] rounded-full"></div>
+                                    <p class="text-[18px] font-lato font-bold text-[#5E6600]"
+                                        v-if="post.commentCount !== undefined">{{ post.commentCount }} Comments</p>
+                                    <p class="text-[18px] font-lato font-bold text-[#5E6600]" v-else>Loading comments...</p>
+                                </div>
+                                <h2
+                                    class="border-b-4 border-black border-dotted w-[600px] text-[48px] font-rufina font-bold mt-[47px]">
+                                    {{
+                                        post.title }}</h2>
+                                <p class="text-[22px] text-[#4D4D4D] font-lato font-bold mt-[18px]">{{
+                                    post.content.substring(0,
+                                        100) }}...</p>
+                                <button class="flex p-0 mt-[46px] text-[24px] font-lato font-bold ml-[100px]"><img
+                                        class="ml-[10px] my-[40px]" src="/blogs/Icon_arrow-right.svg" alt=""></button>
+                            </div>
+                        </router-link>
+                    </div>
                 </div>
-                <router-link :to="{ name: 'BlogDetails', params: { id: post.id } }" class="read-more-grid">→</router-link>
             </div>
-            <div class="pagination">
-                <button v-if="currentPage > 1" @click="prevPage">Назад</button>
-                <button v-for="page in totalPages" :key="page" :class="{ active: page === currentPage }"
-                    @click="goToPage(page)">{{ page }}</button>
-                <button v-if="currentPage < totalPages" @click="nextPage">Вперед</button>
-            </div>
+        </div>
+        <div v-if="viewMode === 'grid'" class="pagination flex gap-[40px] justify-center mb-[128px] mt-[68px] ">
+            <button class="p-0 w-[93px] h-[54px] border-2 border-black rounded-xl" v-if="currentPage > 1"
+                @click="prevPage">Назад</button>
+            <button class="p-0 w-[54px] h-[54px] border-2 border-black rounded-xl" v-for="page in totalPages" :key="page"
+                :class="{ 'bg-black text-white': page === currentPage, 'bg-white text-black': page !== currentPage }"
+                @click="goToPage(page)">{{ page }}</button>
+            <button class="p-0 w-[93px] h-[54px] border-2 border-black rounded-xl" v-if="currentPage < totalPages"
+                @click="nextPage">Вперед</button>
         </div>
     </div>
     <Footer />
@@ -189,3 +211,51 @@ export default {
     }
 }
 </script>
+
+
+<!-- <style>
+/* Grid Styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.blog-item-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #ccc;
+    /* padding: 10px; */
+}
+
+.blog-image-grid {
+    width: 100%;
+    height: auto;
+}
+
+.read-more-grid {
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+    align-self: flex-end;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination button {
+    /* padding: 5px 10px; */
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: #000;
+    color: #fff;
+}</style> -->

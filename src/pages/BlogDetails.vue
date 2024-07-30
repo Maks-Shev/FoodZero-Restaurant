@@ -1,4 +1,7 @@
 <template>
+    <div>
+        <Header/>
+    </div>
     <div class="post-detail">
         <h1>{{ post.title }}</h1>
         <p>{{ post.content }}</p>
@@ -11,9 +14,10 @@
 <script>
 import CommentList from '../components/CommentList.vue';
 import CommentForm from '../components/CommentForm.vue';
+import Header from '../components/Header.vue';
 
 export default {
-    components: { CommentList, CommentForm },
+    components: { CommentList, CommentForm, Header },
     props: ['id'],
     data() {
         return {
