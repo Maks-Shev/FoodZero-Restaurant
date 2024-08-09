@@ -1,7 +1,7 @@
 <template>
-    <div class="comment-list">
-        <div v-for="comment in comments" :key="comment.id" class="comment-item">
-            <p><strong>{{ comment.author }}</strong> - {{ comment.date }}</p>
+    <div class="comment-list border-b-4 border-dotted border-black w-[1200px] mx-auto">
+        <div v-for="comment in comments" :key="comment.id" class="comment-item  ">
+            <p><strong>{{ comment.author }}</strong> - {{ formatDate(comment.date) }}</p>
             <p>{{ comment.content }}</p>
             <button @click="toggleReplyForm(comment.id)">Reply</button>
             <div v-if="comment.showReplyForm">
@@ -70,7 +70,17 @@ export default {
             if (comment) {
                 comment.showReplyForm = !comment.showReplyForm;
             }
-        }
+        },
+        formatDate(dateString) {
+        const date = new Date(dateString);
+
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const datePart = date.toLocaleDateString('en-EN', options).replace(' г.', '');
+
+        const timePart = date.toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+
+        return `${datePart}, ${timePart}`;
+    },
     }
 };
 </script>

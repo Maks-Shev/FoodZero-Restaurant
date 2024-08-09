@@ -1,11 +1,16 @@
 <template>
-    <div class="comment-form">
-        <h3>Leave a Reply</h3>
-        <form @submit.prevent="submitComment">
-            <textarea v-model="comment" placeholder="Comment"></textarea>
-            <input v-model="author" placeholder="Name" />
-            <input v-model="email" placeholder="Email" />
-            <button type="submit">Post Comment</button>
+    <div class="comment-form flex flex-col items-center ">
+        <h3 class="text-[32px] font-rufina font-bold mt-[130px]">Leave a Reply</h3>
+        <form @submit.prevent="submitComment" class=" w-[1200px] mt-[96px]">
+            <label for="comment" class="text-[24px] font-lato font-bold ">Comment:</label>
+            <textarea v-model="comment" class="border-2 border-black h-[350px] my-[20px] text-[20px] p-[30px]"></textarea>
+            <label for="author" class="text-[24px] font-lato font-bold">Name*</label>
+            <input v-model="author" class="border-2 border-black h-[100px] my-[10px] p-[20px] text-[20px]" />
+            <label for="email" class="text-[24px] font-lato font-bold mt-[20px]">Email*</label>
+            <input v-model="email" class="border-2 border-black h-[100px] my-[10px] p-[20px] text-[20px]" />
+            <button type="submit"
+                class="border-2 border-black w-[320px] h-[85px] mt-[96px] text-[32px] font-rufina font-bold ">Post
+                Comment</button>
             <p v-if="error" class="error">{{ error }}</p>
         </form>
     </div>

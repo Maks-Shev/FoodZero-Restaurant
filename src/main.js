@@ -4,6 +4,7 @@ import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
 
+
 import Home from './pages/Home.vue'
 import BlogList from './pages/BlogList.vue'
 import BlogDetails from './pages/BlogDetails.vue'
